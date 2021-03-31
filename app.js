@@ -13,6 +13,9 @@ const port = process.env.PORT || 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
+
+app.set("trust proxy", 1);
+
 app.use(
   session({
     secret: process.env.SECRET,
@@ -20,6 +23,13 @@ app.use(
     saveUninitialized: false,
   })
 ); //一定要先use session才能寫下面的
+
+app.use(function (req, res, next) {
+  if (!req.session) {
+    return next(new Error("Oh no")); //handle error
+  }
+  next(); //otherwise continue
+});
 app.use(passport.initialize()); //順序很重要
 app.use(passport.session()); //順序很重要
 app.use(flash());
@@ -127,7 +137,7 @@ app.post(
     //   req.originalUrl = "";
     //   res.redirect(newRoute);
     // } else {
-    res.redirect("/index");
+    res.redirect("/");
     // }
   }
 );
@@ -162,7 +172,7 @@ app.post("/register", async (req, res, next) => {
         await User.register(newUser, password); //可以用 User.register是因為有passport-local-mongoose
         req.flash("success_msg", "帳號已成功註冊,可以進行登入");
       }
-      res.redirect("/login");
+      res.redirect("/");
     } catch (err) {
       next(err);
     }
