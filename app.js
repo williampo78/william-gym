@@ -18,7 +18,7 @@ app.set("trust proxy", 1);
 
 app.use(
   session({
-    secret: process.env.SECRET,
+    secret: "secretidhere",
     resave: false,
     saveUninitialized: false,
   })
@@ -30,6 +30,7 @@ app.use(function (req, res, next) {
   }
   next(); //otherwise continue
 });
+
 app.use(passport.initialize()); //順序很重要
 app.use(passport.session()); //順序很重要
 app.use(flash());
