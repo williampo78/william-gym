@@ -8,6 +8,7 @@ const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const flash = require("connect-flash");
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -173,6 +174,6 @@ app.get("/logout", (req, res) => {
   res.redirect("/index");
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log("server is running on port 3000");
 });
