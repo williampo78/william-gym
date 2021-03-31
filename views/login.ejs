@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>勁 健身 | 會員登入</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/title-logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <section id="left">
+          <a class="navbar-brand" href="./index">
+            <img src="/images/logo.png" alt="" />
+          </a>
+        </section>
+        <section id="right">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="./index">首頁</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="/about">關於我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="./news">最新消息</a>
+              </li>
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="./charge">消費方式</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="/reserve">場地預約</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nava active" aria-current="page" href="#"
+                  >註冊/登入</a
+                >
+              </li>
+            </ul>
+          </div>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <h1>會員登入</h1>
+
+      <div id="login">
+        <%- include("partials/message") %>
+        <form action="/login" method="POST">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">電子郵件</label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              name="username"
+            />
+            <div id="emailHelp" class="form-text">
+              <small> 我們絕對不會洩漏您的任何資訊</small>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">密碼</label>
+            <input
+              style="font-size: 10px"
+              name="password"
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">登入</button>
+          <small>還不是會員嗎? <a href="/register">請按此註冊</a> </small>
+        </form>
+      </div>
+    </main>
+
+    <footer>
+      <section id="f-l">
+        <img src="/images/logo.png" alt="" />
+      </section>
+      <section id="f-r">
+        <div id="f-t">
+          <ul>
+            <li><a href="/about">關於我們</a></li>
+            <li><a href="/reserve">場地預約</a></li>
+            <li><a href="/news">最新消息</a></li>
+            <li><a href="">粉絲專頁</a></li>
+          </ul>
+        </div>
+        <div id="f-b">
+          <p>地址:台北市中正區健身路23號</p>
+          <p>電話:(02)1234-5678</p>
+        </div>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

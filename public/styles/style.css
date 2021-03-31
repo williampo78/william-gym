@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body header {
+  background-color: #f00000;
+}
+
+body header nav {
+  min-height: 15vh;
+}
+
+body header nav #left {
+  margin: 0 5rem 0 5rem;
+  padding-left: 2rem;
+}
+
+body header nav #left img {
+  width: 60px;
+}
+
+body header nav #right ul li {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 1.2rem;
+}
+
+body header nav #right ul li a.nava {
+  text-decoration: none;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+body header nav #right ul li .nava:hover:after {
+  content: "";
+  height: 2px;
+  background: white;
+  display: block;
+  -webkit-animation: grow 0.5s;
+          animation: grow 0.5s;
+  -webkit-transition: 1px ease 0.2s;
+  transition: 1px ease 0.2s;
+}
+
+body header nav #right ul li .active:after {
+  content: "";
+  height: 2px;
+  background: white;
+  display: block;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main #top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/luis-vidal-FodEsaNZs48-unsplash.jpg);
+  background-size: cover;
+  z-index: -1;
+}
+
+body main #top #opaque {
+  width: 70%;
+  height: 50%;
+  background-color: rgba(201, 201, 201, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #top #opaque h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+body main #bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body main #bottom div {
+  width: 400px;
+  height: 260px;
+}
+
+body main #bottom .desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 3rem;
+}
+
+body main #bottom .desc h3 {
+  display: inline-block;
+  background-color: #f00000;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-size: 2.2rem;
+}
+
+body main #bottom .pic {
+  margin: 3rem;
+}
+
+body main #bottom #pic1 {
+  background-image: url(../images/equip.jpg);
+  background-size: cover;
+}
+
+body main #bottom #pic2 {
+  background-image: url(../images/dumbbell.jpg);
+  background-size: cover;
+}
+
+body main #bottom #pic3 {
+  background-image: url(../images/lifting.jpg);
+  background-size: cover;
+}
+
+body main h1 {
+  margin: 5rem 0rem;
+}
+
+body main #about {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../images/workout.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+body main #about #l {
+  width: 40%;
+  padding: 2rem 0rem;
+  max-height: 80%;
+  color: white;
+}
+
+body main #about #l h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+body main #about #r {
+  width: 600px;
+  color: white;
+  font-size: 1.6rem;
+  padding: 5rem;
+}
+
+body main .card {
+  display: none;
+  border: 1px solid #c2c2c2;
+  margin: 0.75rem;
+  cursor: pointer;
+}
+
+body main .card .row .col-md-4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .card .row .col-md-4 img {
+  width: 100%;
+  height: 90%;
+}
+
+body main .card .row .col-md-8 .card-body h5.card-title {
+  font-weight: bold;
+}
+
+body main .card .row .col-md-8 .card-body p {
+  color: #525252;
+}
+
+body main #loadMore {
+  padding: 10px;
+  text-align: center;
+  background-color: #33739e;
+  color: #fff;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: #fff;
+  -webkit-box-shadow: 0 1px 1px #ccc;
+          box-shadow: 0 1px 1px #ccc;
+  -webkit-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  text-decoration: none;
+}
+
+body main #loadMore:hover {
+  background-color: #fff;
+  color: #33739e;
+}
+
+body main .noContent {
+  background-color: #c7c7c7 !important;
+  pointer-events: none;
+}
+
+body main #charge {
+  width: 90%;
+  margin-bottom: 8rem;
+}
+
+body main #charge img {
+  width: 80%;
+  margin-left: 10%;
+}
+
+body main #charge p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-left: 15%;
+}
+
+body main #charge p a {
+  text-decoration: none;
+  color: #002195;
+}
+
+body main #login {
+  border: 1px solid #cecece;
+  border-radius: 20px;
+  padding: 2rem 1.75rem 4rem 1.75rem;
+  margin: 0rem 2rem 5rem 2rem;
+}
+
+body main #login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+}
+
+body main #login form .mb-3 {
+  width: 350px;
+}
+
+body main #login form button {
+  margin: 1rem 0rem;
+}
+
+body main #signup {
+  border: 1px solid #cecece;
+  border-radius: 20px;
+  padding: 2rem 1.75rem 4rem 1.75rem;
+  margin: 0rem 2rem 5rem 2rem;
+}
+
+body main #signup form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1rem;
+}
+
+body main #signup .mb-3 {
+  width: 400px;
+}
+
+body main #signup input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+body main #signup input::-webkit-outer-spin-button,
+body main #signup input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body main #reserve {
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #reserve div {
+  width: 250px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 2rem 2rem 1rem 2rem;
+}
+
+body main #reserve div .number {
+  margin-top: 0.5rem;
+  background-color: #eeeeee;
+  font-size: 2rem;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main button#book-now {
+  margin: 2rem 0rem 5rem 0rem;
+  width: 150px;
+  height: 75px;
+  border: none;
+  border-radius: 30px;
+  background-color: #0bb9b9;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body main a button#login-first {
+  margin: 2rem 0rem 5rem 0rem;
+  width: 150px;
+  height: 75px;
+  border: none;
+  border-radius: 30px;
+  background-color: #0bb9b9;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+body footer {
+  color: white;
+  background-color: #f00000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer #f-l {
+  padding: 1rem;
+}
+
+body footer #f-l img {
+  width: 80px;
+}
+
+body footer #f-r {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 2rem;
+}
+
+body footer #f-r #f-t ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+}
+
+body footer #f-r #f-t ul li {
+  margin: 1rem;
+}
+
+body footer #f-r #f-t ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+body footer #f-r #f-b {
+  text-align: center;
+}
+
+@-webkit-keyframes grow {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

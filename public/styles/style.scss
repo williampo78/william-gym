@@ -1,0 +1,370 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  header {
+    background-color: #f00000;
+
+    nav {
+      min-height: 15vh;
+      #left {
+        margin: 0 5rem 0 5rem;
+        padding-left: 2rem;
+
+        img {
+          width: 60px;
+        }
+      }
+      #right {
+        ul {
+          li {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin: 1.2rem;
+            a.nava {
+              text-decoration: none;
+              color: white;
+              font-size: 1.25rem;
+              font-weight: bold;
+              //   display: flex;
+              //   flex-direction: column;
+              //   align-items: center;
+            }
+            .nava:hover:after {
+              content: "";
+              //   margin-top: 5px;
+              height: 2px;
+              background: rgb(255, 255, 255);
+              display: block;
+              animation: grow 0.5s;
+              transition: 1px ease 0.2s;
+            }
+            .active:after {
+              content: "";
+              //   margin-top: 5px;
+              height: 2px;
+              background: rgb(255, 255, 255);
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100vh;
+      background-image: url(../images/luis-vidal-FodEsaNZs48-unsplash.jpg);
+      background-size: cover;
+      z-index: -1;
+      #opaque {
+        width: 70%;
+        height: 50%;
+        background-color: rgba(201, 201, 201, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+          color: white;
+          font-weight: bold;
+          font-size: 4rem;
+        }
+      }
+    }
+    #bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      div {
+        width: 400px;
+        height: 260px;
+      }
+
+      .desc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3rem;
+        h3 {
+          display: inline-block;
+          background-color: #f00000;
+          padding: 1rem 1.5rem;
+          color: white;
+          font-size: 2.2rem;
+        }
+      }
+      .pic {
+        margin: 3rem;
+      }
+      #pic1 {
+        background-image: url(../images/equip.jpg);
+        background-size: cover;
+      }
+      #pic2 {
+        background-image: url(../images/dumbbell.jpg);
+        background-size: cover;
+      }
+      #pic3 {
+        background-image: url(../images/lifting.jpg);
+        background-size: cover;
+      }
+    }
+    h1 {
+      margin: 5rem 0rem;
+    }
+    #about {
+      width: 100%;
+      height: 100vh;
+      background-image: url(../images/workout.jpg);
+      background-size: cover;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      #l {
+        width: 40%;
+        padding: 2rem 0rem;
+        max-height: 80%;
+        color: white;
+        h3 {
+          font-size: 3rem;
+          font-weight: bold;
+        }
+      }
+      #r {
+        width: 600px;
+        color: white;
+        font-size: 1.6rem;
+        padding: 5rem;
+      }
+    }
+
+    .card {
+      display: none;
+      border: 1px solid rgb(194, 194, 194);
+      margin: 0.75rem;
+      cursor: pointer;
+      .row {
+        .col-md-4 {
+          display: flex;
+          align-items: center;
+          img {
+            width: 100%;
+            height: 90%;
+          }
+        }
+        .col-md-8 {
+          .card-body {
+            h5.card-title {
+              font-weight: bold;
+            }
+            p {
+              color: #525252;
+            }
+          }
+        }
+      }
+    }
+    #loadMore {
+      padding: 10px;
+      text-align: center;
+      background-color: #33739e;
+      color: #fff;
+      border-width: 0 1px 1px 0;
+      border-style: solid;
+      border-color: #fff;
+      box-shadow: 0 1px 1px #ccc;
+      transition: all 600ms ease-in-out;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      text-decoration: none;
+    }
+    #loadMore:hover {
+      background-color: #fff;
+      color: #33739e;
+    }
+    .noContent {
+      background-color: rgb(199, 199, 199) !important;
+      pointer-events: none;
+    }
+    #charge {
+      width: 90%;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
+      // align-items: center;
+      margin-bottom: 8rem;
+      img {
+        width: 80%;
+        margin-left: 10%;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-left: 15%;
+        a {
+          text-decoration: none;
+          color: #002195;
+        }
+      }
+    }
+    #login {
+      border: 1px solid rgb(206, 206, 206);
+      border-radius: 20px;
+      padding: 2rem 1.75rem 4rem 1.75rem;
+      margin: 0rem 2rem 5rem 2rem;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+        .mb-3 {
+          width: 350px;
+        }
+        button {
+          // background-color: #21bac5;
+          margin: 1rem 0rem;
+        }
+      }
+    }
+    #signup {
+      border: 1px solid rgb(206, 206, 206);
+      border-radius: 20px;
+      padding: 2rem 1.75rem 4rem 1.75rem;
+      margin: 0rem 2rem 5rem 2rem;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem;
+      }
+      .mb-3 {
+        width: 400px;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+    #reserve {
+      width: 90vw;
+      display: flex;
+      flex-wrap: wrap;
+      // align-items: center;
+      justify-content: center;
+
+      div {
+        width: 250px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // justify-content: center;
+        // background-color: rgb(238, 238, 238);
+        margin: 2rem 2rem 1rem 2rem;
+        .number {
+          margin-top: 0.5rem;
+          // width: 80%;
+          // height: 45%;
+          background-color: rgb(238, 238, 238);
+          font-size: 2rem;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    button#book-now {
+      margin: 2rem 0rem 5rem 0rem;
+      width: 150px;
+      height: 75px;
+      border: none;
+      border-radius: 30px;
+      background-color: rgb(11, 185, 185);
+      color: #fff;
+      font-size: 1.5rem;
+    }
+
+    a {
+      button#login-first {
+        margin: 2rem 0rem 5rem 0rem;
+        width: 150px;
+        height: 75px;
+        border: none;
+        border-radius: 30px;
+        background-color: rgb(11, 185, 185);
+        color: #fff;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  footer {
+    // height: 23vh;
+    color: white;
+    background-color: #f00000;
+    display: flex;
+    justify-content: center;
+    #f-l {
+      padding: 1rem;
+      img {
+        width: 80px;
+      }
+    }
+    #f-r {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+      #f-t {
+        ul {
+          display: flex;
+          list-style-type: none;
+          li {
+            margin: 1rem;
+            a {
+              text-decoration: none;
+              color: white;
+            }
+          }
+        }
+      }
+      #f-b {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@keyframes grow {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}

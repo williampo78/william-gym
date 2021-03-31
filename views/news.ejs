@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>勁 健身 | 最新消息</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/images/title-logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <section id="left">
+          <a class="navbar-brand" href="./index">
+            <img src="./images/logo.png" alt="" />
+          </a>
+        </section>
+        <section id="right">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="./index">首頁</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="/about">關於我們</a>
+              </li>
+              <li class="nav-item">
+                <a class="nava active" aria-current="page" href="#">最新消息</a>
+              </li>
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="/charge">消費方式</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nava" aria-current="page" href="/reserve">場地預約</a>
+              </li>
+
+              <li class="nav-item">
+                <%if(typeof user=="undefined"){%>
+                <a class="nava" aria-current="page" href="./login">註冊/登入</a>
+                <% }else{%>
+                <a class="nava" aria-current="page" href="./logout">登出</a>
+                <% }%>
+              </li>
+
+              <%if(typeof user=="undefined"){%>
+              <li class="nav-item"><%" "%></li>
+              <% }else{%>
+              <li class="nav-item"><%= `歡迎, ${user.fullname}` %></li>
+              <% } %>
+            </ul>
+          </div>
+        </section>
+      </nav>
+    </header>
+    <main>
+      <h1>最新消息</h1>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/cny thumbnail.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">運動抽紅包</h5>
+              <p class="card-text">
+                牛年大吉，過年大魚大肉後來運動甩開罪惡吧，2/17-19入場即能得到抽獎卷一張，最大獎將得到3000元現金紅包。
+              </p>
+              <p class="card-text">
+                <small class="text-muted">2021-2-15</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/2021 thumbnail.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">元旦假期場館照常開放</h5>
+              <p class="card-text">
+                Happy New Year!
+                新的一年要繼續保持運動健身的好習慣，2021第一天的第一「健」事從勁
+                健身開始。
+              </p>
+              <p class="card-text">
+                <small class="text-muted">2020-12-29</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/covid thumbnail.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">防疫政策</h5>
+              <p class="card-text">
+                配合秋冬防疫政策，109/12/1起，進場需配戴口罩，並保持社交距離。
+              </p>
+              <p class="card-text">
+                <small class="text-muted">2020-11-25</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/november.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">開課啦</h5>
+              <p class="card-text">11-12月團體課程開課了，敬請報名參加。</p>
+              <p class="card-text">
+                <small class="text-muted">2020-10-23</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/treadmill.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">消毒作業營業時間調整</h5>
+              <p class="card-text">
+                本場館將在10/15(四)上午進行消毒清潔工作，故當日營業時間從14:00開始。
+              </p>
+              <p class="card-text">
+                <small class="text-muted">2020-10-07</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/bodybuilder thumbnail.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">健美比賽開跑</h5>
+              <p class="card-text">
+                是時候展現你各位堅實的身材了，即日起開始報名到9/16，比賽日期10/24，現場將由專業評審進行評分，第一名將有8,000元獎金，趕快報名吧。
+              </p>
+              <p class="card-text">
+                <small class="text-muted">2020-09-05</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="./images/september.png" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">開課啦</h5>
+              <p class="card-text">9-10月團體課程開課了，敬請報名參加。</p>
+              <p class="card-text">
+                <small class="text-muted">2020-08-22</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3" style="max-width: 600px">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src=".//images/sale thumbnail.jpg" alt="..." />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">暑期學生優惠</h5>
+              <p class="card-text">
+                想在開學時擁有煥然一新的身材嗎? 即日起憑學生證報名享月費85折
+              </p>
+              <p class="card-text">
+                <small class="text-muted">2020-07-01</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#" id="loadMore">查看更多</a>
+    </main>
+    <footer>
+      <section id="f-l">
+        <img src="/images/logo.png" alt="" />
+      </section>
+      <section id="f-r">
+        <div id="f-t">
+          <ul>
+            <li><a href="./about">關於我們</a></li>
+            <li><a href="/reserve">場地預約</a></li>
+            <li><a href="./news">最新消息</a></li>
+            <li><a href="">粉絲專頁</a></li>
+          </ul>
+        </div>
+        <div id="f-b">
+          <p>地址:台北市中正區健身路23號</p>
+          <p>電話:(02)1234-5678</p>
+        </div>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
+      integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
+      integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+  </body>
+</html>

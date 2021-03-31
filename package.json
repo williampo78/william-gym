@@ -1,0 +1,35 @@
+{
+  "name": "gym",
+  "version": "1.0.0",
+  "description": "This a gym web",
+  "main": "app.js",
+  "scripts": {
+    "start":"nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williampo78/Gym-web.git"
+  },
+  "author": "William Chou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/williampo78/Gym-web/issues"
+  },
+  "homepage": "https://github.com/williampo78/Gym-web#readme",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.12.2",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^6.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
