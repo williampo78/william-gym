@@ -61,7 +61,7 @@ mongoose
     console.log(e);
   });
 
-app.get("/index", async (req, res, next) => {
+app.get("/", async (req, res, next) => {
   if (req.isAuthenticated()) {
     let { _id } = req.user;
     let user = await User.findOne({ _id });
@@ -171,9 +171,9 @@ app.post("/register", async (req, res, next) => {
 
 app.get("/logout", (req, res) => {
   req.logout();
-  res.redirect("/index");
+  res.redirect("/");
 });
 
 app.listen(port, () => {
-  console.log("server is running on port 3000");
+  console.log(`server is running on port ${port}`);
 });
