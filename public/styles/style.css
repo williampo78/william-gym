@@ -104,9 +104,11 @@ body main #top #opaque {
 }
 
 body main #top #opaque h1 {
+  display: inline-block;
   color: white;
   font-weight: bold;
   font-size: 4rem;
+  margin: 1rem;
 }
 
 body main #bottom {
@@ -126,7 +128,7 @@ body main #bottom {
 }
 
 body main #bottom div {
-  width: 400px;
+  width: 375px;
   height: 260px;
 }
 
@@ -153,6 +155,7 @@ body main #bottom .desc h3 {
 
 body main #bottom .pic {
   margin: 3rem;
+  overflow: hidden;
 }
 
 body main #bottom #pic1 {
@@ -182,8 +185,6 @@ body main #about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -400,7 +401,7 @@ body main #reserve div .number {
           justify-content: center;
 }
 
-body main button#book-now {
+body main button.book-now {
   margin: 2rem 0rem 5rem 0rem;
   width: 150px;
   height: 75px;
@@ -411,7 +412,7 @@ body main button#book-now {
   font-size: 1.5rem;
 }
 
-body main a button#login-first {
+body main a button.login-first {
   margin: 2rem 0rem 5rem 0rem;
   width: 150px;
   height: 75px;
@@ -493,6 +494,118 @@ body footer #f-r #f-b {
   }
   to {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  main div#top div#opaque {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+  }
+  main div#top div#opaque h1 {
+    margin: 0.2rem 2rem;
+    font-size: 4rem;
+  }
+  main div#bottom {
+    padding: 3rem 0rem;
+  }
+  main div#bottom div.desc {
+    margin: 2rem 0rem;
+  }
+  main div#bottom div.pic {
+    margin: 2rem 0rem;
+  }
+  main #about {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main #about div#l {
+    width: 90%;
+    padding: 0;
+    max-height: 80%;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main #about div#l h3 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  main #about div#r {
+    width: 90vw;
+    color: white;
+    font-size: 1.5rem;
+    padding: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 915px) and (max-width: 575px) {
+  main div#top div#opaque {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main div#top div#opaque h1 {
+    margin: 0.2rem 2rem;
+    font-size: 3rem;
+  }
+  main div#about {
+    padding: 0rem;
+  }
+  main div#about div#l h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  main div#about div#r {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 915px) and (max-width: 1100px) {
+  main div.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main div.wrapper div:nth-child(3) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  main div.wrapper div:nth-child(4) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
   }
 }
 /*# sourceMappingURL=style.css.map */
