@@ -60,7 +60,7 @@ app.use((req, res, next) => {
 
 // connect to mongoDB
 mongoose
-  .connect("mongodb://localhost:27017/gymDB", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost:27017/gymDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false,
