@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans TC", sans-serif, Microsoft JhengHei;
 }
 
 body {
@@ -10,13 +10,13 @@ body {
     background-color: #f00000;
 
     nav {
-      min-height: 15vh;
+      min-height: 10vh;
       #left {
         margin: 0 5rem 0 5rem;
         padding-left: 2rem;
 
         img {
-          width: 60px;
+          width: 40px;
         }
       }
       #right {
@@ -133,9 +133,10 @@ body {
     }
     #about {
       width: 100%;
-      height: 100vh;
+      height: auto;
       background-image: url(../images/workout.jpg);
       background-size: cover;
+      background-repeat: no-repeat;
       display: flex;
       // flex-wrap: wrap;
       justify-content: center;
@@ -156,6 +157,30 @@ body {
         color: white;
         font-size: 1.6rem;
         padding: 5rem;
+      }
+    }
+
+    .car {
+      width: 700px;
+      height: auto;
+      padding: 2rem 0rem;
+      margin-bottom: 3rem;
+      .carousel-indicators li {
+        flex: 0 1 auto;
+        width: 10px;
+        height: 10px;
+        border-radius: 26px;
+        margin-right: 5px;
+        margin-left: 5px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.753);
+        border: 1px solid #fff;
+        transition: 0.6s ease;
+      }
+      .carousel-item {
+        height: 400px;
+        overflow: hidden;
       }
     }
 
@@ -209,10 +234,6 @@ body {
     }
     #charge {
       width: 90%;
-      // display: flex;
-      // flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
       margin-bottom: 8rem;
       img {
         width: 80%;
@@ -326,7 +347,6 @@ body {
   }
 
   footer {
-    // height: 23vh;
     color: white;
     background-color: #f00000;
     display: flex;
@@ -342,7 +362,7 @@ body {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-left: 2rem;
+      margin-left: 1rem;
       #f-t {
         ul {
           display: flex;
@@ -418,9 +438,21 @@ body {
         justify-content: center;
       }
     }
+    div#charge {
+      width: 90vw;
+      img {
+        width: 90%;
+        margin-left: 5%;
+      }
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-left: 15%;
+      }
+    }
   }
 
-  @media screen and (max-width: 575px) {
+  @media screen and (max-width: 650px) {
     main {
       div#top {
         div#opaque {
@@ -434,9 +466,9 @@ body {
         }
       }
       div#about {
-        padding: 0rem;
         div#l {
           h3 {
+            margin-top: 2rem;
             font-size: 2.5rem;
             font-weight: bold;
           }
@@ -445,10 +477,65 @@ body {
           font-size: 1.2rem;
         }
       }
+      div.car {
+        width: 85%;
+        margin-bottom: 0rem;
+      }
+      div#charge {
+        p {
+          font-size: 0.7rem;
+          font-weight: bold;
+          margin-left: 15%;
+        }
+      }
+      #signup {
+        width: 85vw;
+        .form-floating {
+          width: 90%;
+        }
+        .form-select {
+          width: 90%;
+        }
+      }
+      div#login {
+        width: 85vw;
+
+        .form-control {
+          width: 100%;
+        }
+      }
+    }
+    footer {
+      #f-l {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #f-r {
+        display: flex;
+        flex-direction: column;
+        // padding-right: 20px;
+        margin-left: 0rem;
+        #f-t {
+          padding: 1rem;
+          ul {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem;
+            li {
+              padding: 0rem;
+              line-height: 0.2rem;
+            }
+          }
+        }
+        #f-b {
+          text-align: center;
+        }
+      }
     }
   }
 
-  @media screen and (max-width: 1100px) {
+  @media screen and (max-width: 1200px) {
     main {
       div.wrapper {
         display: flex;

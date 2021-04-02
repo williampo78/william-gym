@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans TC", sans-serif, Microsoft JhengHei;
 }
 
 body header {
@@ -11,7 +11,7 @@ body header {
 }
 
 body header nav {
-  min-height: 15vh;
+  min-height: 10vh;
 }
 
 body header nav #left {
@@ -20,7 +20,7 @@ body header nav #left {
 }
 
 body header nav #left img {
-  width: 60px;
+  width: 40px;
 }
 
 body header nav #right ul li {
@@ -179,9 +179,10 @@ body main h1 {
 
 body main #about {
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-image: url(../images/workout.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,6 +212,35 @@ body main #about #r {
   color: white;
   font-size: 1.6rem;
   padding: 5rem;
+}
+
+body main .car {
+  width: 700px;
+  height: auto;
+  padding: 2rem 0rem;
+  margin-bottom: 3rem;
+}
+
+body main .car .carousel-indicators li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 26px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.753);
+  border: 1px solid #fff;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+
+body main .car .carousel-item {
+  height: 400px;
+  overflow: hidden;
 }
 
 body main .card {
@@ -456,7 +486,7 @@ body footer #f-r {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 body footer #f-r #f-t ul {
@@ -558,9 +588,21 @@ body footer #f-r #f-b {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  main div#charge {
+    width: 90vw;
+  }
+  main div#charge img {
+    width: 90%;
+    margin-left: 5%;
+  }
+  main div#charge p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 15%;
+  }
 }
 
-@media screen and (max-width: 915px) and (max-width: 575px) {
+@media screen and (max-width: 915px) and (max-width: 650px) {
   main div#top div#opaque {
     width: 100vw;
     display: -webkit-box;
@@ -575,19 +617,82 @@ body footer #f-r #f-b {
     margin: 0.2rem 2rem;
     font-size: 3rem;
   }
-  main div#about {
-    padding: 0rem;
-  }
   main div#about div#l h3 {
+    margin-top: 2rem;
     font-size: 2.5rem;
     font-weight: bold;
   }
   main div#about div#r {
     font-size: 1.2rem;
   }
+  main div.car {
+    width: 85%;
+    margin-bottom: 0rem;
+  }
+  main div#charge p {
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-left: 15%;
+  }
+  main #signup {
+    width: 85vw;
+  }
+  main #signup .form-floating {
+    width: 90%;
+  }
+  main #signup .form-select {
+    width: 90%;
+  }
+  main div#login {
+    width: 85vw;
+  }
+  main div#login .form-control {
+    width: 100%;
+  }
+  footer #f-l {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer #f-r {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0rem;
+  }
+  footer #f-r #f-t {
+    padding: 1rem;
+  }
+  footer #f-r #f-t ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 1rem;
+  }
+  footer #f-r #f-t ul li {
+    padding: 0rem;
+    line-height: 0.2rem;
+  }
+  footer #f-r #f-b {
+    text-align: center;
+  }
 }
 
-@media screen and (max-width: 915px) and (max-width: 1100px) {
+@media screen and (max-width: 915px) and (max-width: 1200px) {
   main div.wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
