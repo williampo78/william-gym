@@ -250,6 +250,7 @@ body {
       }
     }
     #login {
+      width: 450px;
       border: 1px solid rgb(206, 206, 206);
       border-radius: 20px;
       padding: 2rem 1.75rem 4rem 1.75rem;
@@ -488,13 +489,16 @@ body {
           margin-left: 15%;
         }
       }
-      #signup {
+      div#signup {
         width: 85vw;
         .form-floating {
-          width: 90%;
+          width: 75vw;
+          .form-control {
+            width: 100%;
+          }
         }
         .form-select {
-          width: 90%;
+          width: 75vw;
         }
       }
       div#login {

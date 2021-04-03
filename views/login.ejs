@@ -81,29 +81,27 @@
       <div id="login">
         <%- include("partials/message") %>
         <form action="/login" method="POST">
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">電子郵件</label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              name="username"
-            />
-            <div id="emailHelp" class="form-text">
-              <small> 我們絕對不會洩漏您的任何資訊</small>
-            </div>
+          <label for="exampleInputEmail1" class="form-label">電子郵件</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            name="username"
+          />
+          <div id="emailHelp" class="form-text">
+            <small> 我們絕對不會洩漏您的任何資訊</small>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">密碼</label>
-            <input
-              style="font-size: 10px"
-              name="password"
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
+
+          <label for="exampleInputPassword1" class="form-label">密碼</label>
+          <input
+            style="font-size: 10px"
+            name="password"
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+
           <button type="submit" class="btn btn-primary">登入</button>
           <small>還不是會員嗎? <a href="/register">請按此註冊</a> </small>
         </form>

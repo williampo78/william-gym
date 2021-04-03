@@ -321,6 +321,7 @@ body main #charge p a {
 }
 
 body main #login {
+  width: 450px;
   border: 1px solid #cecece;
   border-radius: 20px;
   padding: 2rem 1.75rem 4rem 1.75rem;
@@ -634,14 +635,17 @@ body footer #f-r #f-b {
     font-weight: bold;
     margin-left: 15%;
   }
-  main #signup {
+  main div#signup {
     width: 85vw;
   }
-  main #signup .form-floating {
-    width: 90%;
+  main div#signup .form-floating {
+    width: 75vw;
   }
-  main #signup .form-select {
-    width: 90%;
+  main div#signup .form-floating .form-control {
+    width: 100%;
+  }
+  main div#signup .form-select {
+    width: 75vw;
   }
   main div#login {
     width: 85vw;
