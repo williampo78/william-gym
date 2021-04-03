@@ -3,11 +3,14 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const List = require("./models/list");
 const User = require("./models/user");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const flash = require("connect-flash");
+const newlist = new List();
+
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
@@ -116,9 +119,29 @@ app.get("/reserve", async (req, res) => {
   if (req.isAuthenticated()) {
     let { _id } = req.user;
     let user = await User.findOne({ _id });
-    res.render("reserve", { user: req.user });
+    res.render("reserve", { user: req.user, newlist: newlist });
+    // console.log(newlist.person);
   } else {
-    res.render("reserve");
+    res.render("reserve", { newlist: newlist });
+  }
+});
+
+app.get("/reserve/success/", async (req, res) => {
+  try {
+    if (req.isAuthenticated()) {
+      let { username } = req.user;
+      let user = await User.findOne({ username });
+
+      newlist.person.push(user.fullname);
+      await newlist.save();
+      console.log({ username });
+      // console.log(newlist.person);
+      res.render("success", { user: req.user, newlist: newlist });
+    } else {
+      res.render("success", { newlist: newlist });
+    }
+  } catch (err) {
+    console.log(err);
   }
 });
 
