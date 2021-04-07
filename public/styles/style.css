@@ -176,19 +176,17 @@ body main #bottom .pic {
 body main #bottom .pic img {
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 body main #bottom .pic:hover img {
   -webkit-filter: blur(5px) brightness(60%);
           filter: blur(5px) brightness(60%);
-  -webkit-transition: ease 0.5s;
-  transition: ease 0.5s;
 }
 
 body main #bottom .pic:hover .show {
   opacity: 1;
-  -webkit-transition: ease 1s;
-  transition: ease 1s;
 }
 
 body main #bottom .pic .show {
@@ -202,6 +200,8 @@ body main #bottom .pic .show {
   font-size: 22px;
   font-weight: bold;
   cursor: default;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
 }
 
 body main h1 {
@@ -621,6 +621,13 @@ body footer #f-r #f-b {
 }
 
 @media screen and (max-width: 915px) and (max-width: 650px) {
+  header nav.navbar #left {
+    padding-left: 0;
+    margin: 0rem 1rem;
+  }
+  header nav.navbar #right {
+    padding: 0rem;
+  }
   main div#top div.carousel div.carousel-inner div.carousel-item {
     height: 60vh;
   }
