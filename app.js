@@ -116,13 +116,16 @@ app.get("/charge", async (req, res) => {
 });
 
 app.get("/reserve", async (req, res) => {
+  // let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
+  let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
   if (req.isAuthenticated()) {
     let { _id } = req.user;
+
     let user = await User.findOne({ _id });
-    res.render("reserve", { user: req.user, newlist: newlist });
+    res.render("reserve", { user: req.user, newlist: currentList });
     // console.log(newlist.person);
   } else {
-    res.render("reserve", { newlist: newlist });
+    res.render("reserve", { newlist: currentList });
   }
 });
 
@@ -131,14 +134,20 @@ app.get("/reserve/success/", async (req, res) => {
     if (req.isAuthenticated()) {
       let { username } = req.user;
       let user = await User.findOne({ username });
+      // let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
+      let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
+      // console.log(currentList);
+      currentList.person.push(user.fullname);
+      await currentList.save();
 
-      newlist.person.push(user.fullname);
-      await newlist.save();
+      // newlist.person.push(user.fullname);
+      // await newlist.save();
       console.log({ username });
-      // console.log(newlist.person);
-      res.render("success", { user: req.user, newlist: newlist });
+      console.log(user.fullname);
+
+      res.render("success", { user: req.user, newlist: currentList });
     } else {
-      res.render("success", { newlist: newlist });
+      res.render("success", { newlist: currentList });
     }
   } catch (err) {
     console.log(err);

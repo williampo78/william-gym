@@ -9,10 +9,12 @@ body {
   header {
     background-color: #f00000;
 
-    nav {
+    .navbar {
       min-height: 10vh;
+      display: flex;
+      justify-content: space-between;
       #left {
-        margin: 0 5rem 0 5rem;
+        margin: 0rem 3rem;
         padding-left: 2rem;
 
         img {
@@ -20,12 +22,13 @@ body {
         }
       }
       #right {
+        padding-right: 2rem;
         ul {
           li {
             color: white;
             font-size: 1.25rem;
             font-weight: bold;
-            margin: 1.2rem;
+            margin: 1rem;
             a.nava {
               text-decoration: none;
               color: white;
@@ -62,27 +65,30 @@ body {
     justify-content: center;
     align-items: center;
     #top {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 100%;
-      height: 100vh;
-      background-image: url(../images/luis-vidal-FodEsaNZs48-unsplash.jpg);
-      background-size: cover;
-      z-index: -1;
-      #opaque {
-        width: 70%;
-        height: 50%;
-        background-color: rgba(201, 201, 201, 0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        h1 {
-          display: inline-block;
-          color: white;
-          font-weight: bold;
-          font-size: 4rem;
-          margin: 1rem;
+      height: auto;
+      z-index: -5;
+      .carousel {
+        .carousel-inner {
+          .carousel-item {
+            height: 80vh;
+            img {
+              height: 100%;
+              object-position: center;
+              object-fit: cover;
+            }
+            .carousel-caption {
+              top: 30%;
+              // position: absolute;
+              h5 {
+                display: inline-block;
+                margin: 1rem;
+                top: 50%;
+                font-size: 4rem;
+                font-weight: bold;
+              }
+            }
+          }
         }
       }
     }
@@ -97,7 +103,6 @@ body {
         width: 375px;
         height: 260px;
       }
-
       .desc {
         display: flex;
         justify-content: center;
@@ -109,28 +114,52 @@ body {
           padding: 1rem 1.5rem;
           color: white;
           font-size: 2.2rem;
+          cursor: default;
         }
       }
+
       .pic {
-        margin: 3rem;
+        position: relative;
         overflow: hidden;
-      }
-      #pic1 {
-        background-image: url(../images/equip.jpg);
-        background-size: cover;
-      }
-      #pic2 {
-        background-image: url(../images/dumbbell.jpg);
-        background-size: cover;
-      }
-      #pic3 {
-        background-image: url(../images/lifting.jpg);
-        background-size: cover;
+        object-fit: cover;
+        width: 375px;
+        height: 260px;
+        margin: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover img {
+          filter: blur(5px) brightness(60%);
+          transition: ease 0.5s;
+        }
+        &:hover .show {
+          opacity: 1;
+          transition: ease 1s;
+        }
+        .show {
+          text-align: center;
+          opacity: 0;
+          position: absolute;
+          top: 30%;
+          width: 70%;
+          color: #fff;
+          z-index: 2;
+          font-size: 22px;
+          font-weight: bold;
+          cursor: default;
+        }
       }
     }
+
     h1 {
       margin: 5rem 0rem;
     }
+
     #about {
       width: 100%;
       height: auto;
@@ -395,17 +424,6 @@ body {
 
 @media screen and (max-width: 915px) {
   main {
-    div#top {
-      div#opaque {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        h1 {
-          margin: 0.2rem 2rem;
-          font-size: 4rem;
-        }
-      }
-    }
     div#bottom {
       padding: 3rem 0rem;
       div.desc {
@@ -456,16 +474,21 @@ body {
   @media screen and (max-width: 650px) {
     main {
       div#top {
-        div#opaque {
-          width: 100vw;
-          display: flex;
-          flex-direction: column;
-          h1 {
-            margin: 0.2rem 2rem;
-            font-size: 3rem;
+        div.carousel {
+          div.carousel-inner {
+            div.carousel-item {
+              height: 60vh;
+              div.carousel-caption {
+                h5 {
+                  font-size: 38px;
+                  margin-top: 0.5;
+                }
+              }
+            }
           }
         }
       }
+
       div#about {
         div#l {
           h3 {

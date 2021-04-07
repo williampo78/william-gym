@@ -20,8 +20,4 @@ $(document).ready(function () {
   $("#book-now").click(function () {
     $("#book-now").text("預約成功").attr("disabled", true);
   });
-
-  // $("#login-first").click(function () {
-  //   $("#login-first").append("<a href='#'>Hi</a>");
-  // });
 });
