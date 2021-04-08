@@ -323,7 +323,7 @@ body {
         margin: 0;
       }
     }
-    #reserve {
+    .reserve {
       width: 90vw;
       display: flex;
       flex-wrap: wrap;
@@ -351,20 +351,9 @@ body {
         }
       }
     }
-    button.book-now {
-      margin: 2rem 0rem 5rem 0rem;
-      width: 150px;
-      height: 75px;
-      border: none;
-      border-radius: 30px;
-      background-color: rgb(11, 185, 185);
-      color: #fff;
-      font-size: 1.5rem;
-    }
-
-    a {
-      button.login-first {
-        margin: 2rem 0rem 5rem 0rem;
+    .res-can {
+      button.book-now {
+        margin: 2rem 3rem 5rem 3rem;
         width: 150px;
         height: 75px;
         border: none;
@@ -372,6 +361,19 @@ body {
         background-color: rgb(11, 185, 185);
         color: #fff;
         font-size: 1.5rem;
+      }
+
+      a {
+        button.login-first {
+          margin: 2rem 3rem 5rem 3rem;
+          width: 150px;
+          height: 75px;
+          border: none;
+          border-radius: 30px;
+          background-color: rgb(11, 185, 185);
+          color: #fff;
+          font-size: 1.5rem;
+        }
       }
     }
   }

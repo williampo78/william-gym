@@ -422,7 +422,7 @@ body main #signup input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-body main #reserve {
+body main .reserve {
   width: 90vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -434,7 +434,7 @@ body main #reserve {
           justify-content: center;
 }
 
-body main #reserve div {
+body main .reserve div {
   width: 250px;
   height: 200px;
   display: -webkit-box;
@@ -450,7 +450,7 @@ body main #reserve div {
   margin: 2rem 2rem 1rem 2rem;
 }
 
-body main #reserve div .number {
+body main .reserve div .number {
   margin-top: 0.5rem;
   background-color: #eeeeee;
   font-size: 2rem;
@@ -463,8 +463,8 @@ body main #reserve div .number {
           justify-content: center;
 }
 
-body main button.book-now {
-  margin: 2rem 0rem 5rem 0rem;
+body main .res-can button.book-now {
+  margin: 2rem 3rem 5rem 3rem;
   width: 150px;
   height: 75px;
   border: none;
@@ -474,8 +474,8 @@ body main button.book-now {
   font-size: 1.5rem;
 }
 
-body main a button.login-first {
-  margin: 2rem 0rem 5rem 0rem;
+body main .res-can a button.login-first {
+  margin: 2rem 3rem 5rem 3rem;
   width: 150px;
   height: 75px;
   border: none;

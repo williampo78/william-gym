@@ -62,7 +62,9 @@
               </li>
 
               <li class="nav-item">
-                <a class="nava active" aria-current="page" href="#">場地預約</a>
+                <a class="nava active" aria-current="page" href="/reserve"
+                  >場地預約</a
+                >
               </li>
 
               <li class="nav-item">
@@ -84,12 +86,12 @@
       </nav>
     </header>
     <main>
-      <h1>場地預約</h1>
-      <div id="reserve">
+      <h1>預約成功!</h1>
+      <div class="reserve">
         <div>
           <h3>目前館內人數</h3>
           <div class="number">
-            <p>9人</p>
+            <p>8人</p>
           </div>
         </div>
         <div>
@@ -101,12 +103,26 @@
         <div>
           <h3>可預約人數</h3>
           <div class="number">
-            <p style="color: #0b5774"><%= 20-9-newlist.person.length %>人</p>
+            <p style="color: #0b5774"><%= 15-8-newlist.person.length %>人</p>
           </div>
         </div>
       </div>
 
-      <button class="book-now" disabled>預約成功</button>
+      <div class="res-can">
+        <%if(typeof user=="undefined"){%>
+        <a href="/login"><button class="login-first">我要預約</button></a>
+
+        <%} else {%> <% if(newlist.person.includes(user.fullname)) {%>
+        <a href="/reserve/delete">
+          <button class="book-now">取消預約</button></a
+        >
+
+        <%}else {%>
+        <a href="/reserve/success"
+          ><button class="book-now">我要預約</button></a
+        >
+        <% }%> <% }%>
+      </div>
     </main>
     <footer>
       <section id="f-l">
