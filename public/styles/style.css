@@ -647,6 +647,10 @@ body footer #f-r #f-b {
     width: 85%;
     margin-bottom: 0rem;
   }
+  main div#charge img {
+    width: 100%;
+    margin: 0;
+  }
   main div#charge p {
     font-size: 0.7rem;
     font-weight: bold;
