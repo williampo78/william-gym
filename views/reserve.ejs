@@ -86,7 +86,14 @@
       </nav>
     </header>
     <main>
+      <%if(typeof user=="undefined"){%>
       <h1>場地預約</h1>
+      <% }else {%> <% if(newlist.person.includes(user.fullname)) {%>
+      <h1>預約成功!</h1>
+      <%}else {%>
+      <h1>場地預約</h1>
+      <%} %> <%} %>
+
       <div class="reserve">
         <div>
           <h3>目前館內人數</h3>
