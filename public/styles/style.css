@@ -11,7 +11,6 @@ body header {
 }
 
 body header .navbar {
-  min-height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +24,12 @@ body header .navbar #left {
   padding-left: 2rem;
 }
 
-body header .navbar #left img {
+body header .navbar #left .navbar-brand {
+  margin: 0;
+  padding: 0;
+}
+
+body header .navbar #left .navbar-brand img {
   width: 40px;
 }
 
@@ -33,21 +37,21 @@ body header .navbar #right {
   padding-right: 2rem;
 }
 
-body header .navbar #right ul li {
+body header .navbar #right ul .nav-item {
   color: white;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin: 1rem;
+  margin: 0rem 1rem;
 }
 
-body header .navbar #right ul li a.nava {
+body header .navbar #right ul .nav-item a.nava {
   text-decoration: none;
   color: white;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-body header .navbar #right ul li .nava:hover:after {
+body header .navbar #right ul .nav-item .nava:hover:after {
   content: "";
   height: 2px;
   background: white;
@@ -58,7 +62,7 @@ body header .navbar #right ul li .nava:hover:after {
   transition: 1px ease 0.2s;
 }
 
-body header .navbar #right ul li .active:after {
+body header .navbar #right ul .nav-item .active:after {
   content: "";
   height: 2px;
   background: white;
@@ -559,7 +563,7 @@ body footer #f-r #f-b {
   }
 }
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 991px) {
   main div#bottom {
     padding: 3rem 0rem;
   }
@@ -620,7 +624,7 @@ body footer #f-r #f-b {
   }
 }
 
-@media screen and (max-width: 915px) and (max-width: 650px) {
+@media screen and (max-width: 991px) and (max-width: 650px) {
   header nav.navbar #left {
     padding-left: 0;
     margin: 0rem 1rem;
@@ -717,7 +721,7 @@ body footer #f-r #f-b {
   }
 }
 
-@media screen and (max-width: 915px) and (max-width: 1200px) {
+@media screen and (max-width: 991px) and (max-width: 1200px) {
   main div.wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
