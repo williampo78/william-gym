@@ -116,8 +116,8 @@ app.get("/charge", async (req, res) => {
 });
 
 app.get("/reserve", async (req, res) => {
-  let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
-  // let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
+  // let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
+  let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
   if (req.isAuthenticated()) {
     let { _id } = req.user;
 
