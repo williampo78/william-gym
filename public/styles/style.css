@@ -146,7 +146,7 @@ body main #bottom .desc {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 3rem;
+  margin: 5rem;
 }
 
 body main #bottom .desc h3 {
@@ -249,33 +249,56 @@ body main #about #r {
   padding: 5rem;
 }
 
-body main .car {
-  width: 700px;
-  height: auto;
-  padding: 2rem 0rem;
-  margin-bottom: 3rem;
+body main .timeline {
+  border-left: 2px solid #d4d7fc;
+  margin: 0 auto 5rem auto;
+  letter-spacing: 0.2px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  list-style: none;
+  padding: 0 50px 0 50px;
+  text-align: left;
+  width: 60vw;
 }
 
-body main .car .carousel-indicators li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  width: 10px;
-  height: 10px;
-  border-radius: 26px;
-  margin-right: 5px;
-  margin-left: 5px;
-  text-indent: -999px;
-  cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.753);
-  border: 1px solid #fff;
-  -webkit-transition: 0.6s ease;
-  transition: 0.6s ease;
+body main .timeline h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
 }
 
-body main .car .carousel-item {
-  height: 400px;
-  overflow: hidden;
+body main .timeline p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+body main .timeline .event {
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+body main .timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+
+body main .timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 5px;
+  -webkit-box-shadow: 0 0 0 2px #838dff;
+          box-shadow: 0 0 0 2px #838dff;
+  left: -55.8px;
+  background: #fff;
+  border-radius: 50%;
+  height: 9px;
+  width: 9px;
+  content: "";
+  top: 5px;
+  margin-top: -5px;
 }
 
 body main .card {
@@ -310,7 +333,7 @@ body main .card .row .col-md-8 .card-body p {
 body main #loadMore {
   padding: 10px;
   text-align: center;
-  background-color: #33739e;
+  background-color: #f00000;
   color: #fff;
   border-width: 0 1px 1px 0;
   border-style: solid;
@@ -326,7 +349,7 @@ body main #loadMore {
 
 body main #loadMore:hover {
   background-color: #fff;
-  color: #33739e;
+  color: #f00000;
 }
 
 body main .noContent {
@@ -353,6 +376,10 @@ body main #charge p {
 body main #charge p a {
   text-decoration: none;
   color: #002195;
+}
+
+body main .map {
+  width: 70vw;
 }
 
 body main #login {
@@ -384,7 +411,9 @@ body main #login form .mb-3 {
   width: 350px;
 }
 
-body main #login form button {
+body main #login form .login-btn {
+  background-color: #f00000;
+  color: white;
   margin: 1rem 0rem;
 }
 
@@ -473,7 +502,7 @@ body main .res-can button.book-now {
   height: 75px;
   border: none;
   border-radius: 30px;
-  background-color: #0bb9b9;
+  background-color: #f00000;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -484,7 +513,7 @@ body main .res-can a button.login-first {
   height: 75px;
   border: none;
   border-radius: 30px;
-  background-color: #0bb9b9;
+  background-color: #f00000;
   color: #fff;
   font-size: 1.5rem;
 }
@@ -646,6 +675,16 @@ body footer #f-r #f-b {
   }
   main div#about div#r {
     font-size: 1.2rem;
+  }
+  main .timeline {
+    max-width: 98%;
+    padding: 0 27px 0 27px;
+  }
+  main .timeline .event {
+    padding-top: 0;
+  }
+  main .timeline .event:after {
+    left: -31.8px;
   }
   main div.car {
     width: 85%;

@@ -107,7 +107,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 3rem;
+        margin: 5rem;
         h3 {
           display: inline-block;
           background-color: #f00000;
@@ -188,28 +188,49 @@ body {
         padding: 5rem;
       }
     }
-
-    .car {
-      width: 700px;
-      height: auto;
-      padding: 2rem 0rem;
-      margin-bottom: 3rem;
-      .carousel-indicators li {
-        flex: 0 1 auto;
-        width: 10px;
-        height: 10px;
-        border-radius: 26px;
-        margin-right: 5px;
-        margin-left: 5px;
-        text-indent: -999px;
-        cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.753);
-        border: 1px solid #fff;
-        transition: 0.6s ease;
+    .timeline {
+      border-left: 2px solid #d4d7fc;
+      margin: 0 auto 5rem auto;
+      letter-spacing: 0.2px;
+      position: relative;
+      line-height: 1.4em;
+      font-size: 1.03em;
+      list-style: none;
+      padding: 0 50px 0 50px;
+      text-align: left;
+      width: 60vw;
+      h3 {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
       }
-      .carousel-item {
-        height: 400px;
-        overflow: hidden;
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      .event {
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+        position: relative;
+      }
+      .event:last-of-type {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border: none;
+      }
+      .event:after {
+        position: absolute;
+        display: block;
+        top: 5px;
+        box-shadow: 0 0 0 2px #838dff;
+        left: -55.8px;
+        background: #fff;
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+        content: "";
+        top: 5px;
+        margin-top: -5px;
       }
     }
 
@@ -242,7 +263,7 @@ body {
     #loadMore {
       padding: 10px;
       text-align: center;
-      background-color: #33739e;
+      background-color: #f00000;
       color: #fff;
       border-width: 0 1px 1px 0;
       border-style: solid;
@@ -255,7 +276,7 @@ body {
     }
     #loadMore:hover {
       background-color: #fff;
-      color: #33739e;
+      color: #f00000;
     }
     .noContent {
       background-color: rgb(199, 199, 199) !important;
@@ -278,6 +299,10 @@ body {
         }
       }
     }
+    .map {
+      width: 70vw;
+    }
+
     #login {
       width: 450px;
       border: 1px solid rgb(206, 206, 206);
@@ -293,8 +318,9 @@ body {
         .mb-3 {
           width: 350px;
         }
-        button {
-          // background-color: #21bac5;
+        .login-btn {
+          background-color: #f00000;
+          color: white;
           margin: 1rem 0rem;
         }
       }
@@ -358,7 +384,7 @@ body {
         height: 75px;
         border: none;
         border-radius: 30px;
-        background-color: rgb(11, 185, 185);
+        background-color: #f00000;
         color: #fff;
         font-size: 1.5rem;
       }
@@ -370,7 +396,7 @@ body {
           height: 75px;
           border: none;
           border-radius: 30px;
-          background-color: rgb(11, 185, 185);
+          background-color: #f00000;
           color: #fff;
           font-size: 1.5rem;
         }
@@ -513,6 +539,16 @@ body {
         div#r {
           font-size: 1.2rem;
         }
+      }
+      .timeline {
+        max-width: 98%;
+        padding: 0 27px 0 27px;
+      }
+      .timeline .event {
+        padding-top: 0;
+      }
+      .timeline .event:after {
+        left: -31.8px;
       }
       div.car {
         width: 85%;

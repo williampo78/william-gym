@@ -17,95 +17,6 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="styles/style.css" />
-    <style>
-      .timeline {
-        border-left: 2px solid #d4d7fc;
-        margin: 0 auto 5rem auto;
-        letter-spacing: 0.2px;
-        position: relative;
-        line-height: 1.4em;
-        font-size: 1.03em;
-        list-style: none;
-        padding: 0 50px 0 50px;
-        text-align: left;
-        width: 60vw;
-      }
-
-      @media (max-width: 767px) {
-        .timeline {
-          max-width: 98%;
-          padding: 0 27px 0 27px;
-        }
-      }
-
-      .timeline h3 {
-        font-weight: 600;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-      }
-      .timeline p {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-      }
-
-      .timeline .event {
-        padding-bottom: 25px;
-        margin-bottom: 25px;
-        position: relative;
-      }
-
-      @media (max-width: 767px) {
-        .timeline .event {
-          padding-top: 0;
-        }
-      }
-
-      .timeline .event:last-of-type {
-        padding-bottom: 0;
-        margin-bottom: 0;
-        border: none;
-      }
-
-      .timeline .event:after {
-        position: absolute;
-        display: block;
-        top: 5px;
-      }
-
-      .timeline .event:after {
-        -webkit-box-shadow: 0 0 0 3px #979ff8;
-        box-shadow: 0 0 0 2px #838dff;
-        left: -55.8px;
-        background: #fff;
-        border-radius: 50%;
-        height: 9px;
-        width: 9px;
-        content: "";
-        top: 5px;
-        margin-top: -5px;
-      }
-
-      @media (max-width: 767px) {
-        .timeline .event:after {
-          left: -31.8px;
-        }
-      }
-
-      .rtl .timeline {
-        border-left: 0;
-        text-align: right;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-        border-bottom-left-radius: 4px;
-        border-top-left-radius: 4px;
-        border-right: 3px solid #727cf5;
-      }
-
-      .rtl .timeline .event::after {
-        left: 0;
-        right: -55.8px;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -166,7 +77,6 @@
       </nav>
     </header>
     <main>
-      <h1>關於我們</h1>
       <div id="about">
         <div id="l">
           <h3>頂級健身空間</h3>
@@ -182,7 +92,8 @@
         </div>
       </div>
 
-      <h1>我們的歷史</h1>
+      <h1>關於我們</h1>
+
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -236,8 +147,11 @@
           </ul>
         </div>
         <div id="f-b">
-          <p>地址:台北市中正區健身路23號</p>
-          <p>電話:(02)1234-5678</p>
+          <small>地址:台北市中正區健康路1號</small>
+          <br />
+          <small>電話:(02)1234-5678</small>
+          <br />
+          <small>Copyright© William Chou</small>
         </div>
       </section>
     </footer>
