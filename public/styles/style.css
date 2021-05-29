@@ -214,7 +214,7 @@ body main h1 {
 
 body main #about {
   width: 100%;
-  height: auto;
+  height: 80vh;
   background-image: url(../images/workout.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -245,8 +245,8 @@ body main #about #l h3 {
 body main #about #r {
   width: 600px;
   color: white;
-  font-size: 1.6rem;
-  padding: 5rem;
+  font-size: 1.35rem;
+  padding: 8rem;
 }
 
 body main .timeline {
@@ -534,7 +534,7 @@ body footer #f-l {
 }
 
 body footer #f-l img {
-  width: 80px;
+  width: 60px;
 }
 
 body footer #f-r {
@@ -562,7 +562,7 @@ body footer #f-r #f-t ul {
 }
 
 body footer #f-r #f-t ul li {
-  margin: 1rem;
+  margin-left: 1rem;
 }
 
 body footer #f-r #f-t ul li a {
@@ -572,6 +572,10 @@ body footer #f-r #f-t ul li a {
 
 body footer #f-r #f-b {
   text-align: center;
+}
+
+body footer #f-r #f-b .small {
+  margin-left: 1rem;
 }
 
 @-webkit-keyframes grow {
@@ -610,6 +614,7 @@ body footer #f-r #f-b {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 60vh;
   }
   main #about div#l {
     width: 90%;
@@ -667,6 +672,9 @@ body footer #f-r #f-b {
   main div#top div.carousel div.carousel-inner div.carousel-item div.carousel-caption h5 {
     font-size: 38px;
     margin-top: 0.5;
+  }
+  main div#about {
+    height: 60vh;
   }
   main div#about div#l h3 {
     margin-top: 2rem;
@@ -757,6 +765,17 @@ body footer #f-r #f-b {
   }
   footer #f-r #f-b {
     text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  footer #f-r #f-b .br {
+    display: none;
   }
 }
 

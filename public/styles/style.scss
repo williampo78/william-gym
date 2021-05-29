@@ -162,7 +162,7 @@ body {
 
     #about {
       width: 100%;
-      height: auto;
+      height: 80vh;
       background-image: url(../images/workout.jpg);
       background-size: cover;
       background-repeat: no-repeat;
@@ -184,8 +184,8 @@ body {
       #r {
         width: 600px;
         color: white;
-        font-size: 1.6rem;
-        padding: 5rem;
+        font-size: 1.35rem;
+        padding: 8rem;
       }
     }
     .timeline {
@@ -412,7 +412,7 @@ body {
     #f-l {
       padding: 1rem;
       img {
-        width: 80px;
+        width: 60px;
       }
     }
     #f-r {
@@ -426,7 +426,7 @@ body {
           display: flex;
           list-style-type: none;
           li {
-            margin: 1rem;
+            margin-left: 1rem;
             a {
               text-decoration: none;
               color: white;
@@ -436,6 +436,9 @@ body {
       }
       #f-b {
         text-align: center;
+        .small {
+          margin-left: 1rem;
+        }
       }
     }
   }
@@ -464,6 +467,7 @@ body {
     #about {
       display: flex;
       flex-direction: column;
+      height: 60vh;
       div#l {
         width: 90%;
         padding: 0;
@@ -529,6 +533,7 @@ body {
       }
 
       div#about {
+        height: 60vh;
         div#l {
           h3 {
             margin-top: 2rem;
@@ -579,7 +584,6 @@ body {
       }
       div#login {
         width: 85vw;
-
         .form-control {
           width: 100%;
         }
@@ -610,6 +614,12 @@ body {
         }
         #f-b {
           text-align: center;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 1rem;
+          .br {
+            display: none;
+          }
         }
       }
     }
