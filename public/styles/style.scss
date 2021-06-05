@@ -72,6 +72,7 @@ body {
         .carousel-inner {
           .carousel-item {
             height: 80vh;
+            position: relative;
             img {
               height: 100%;
               object-position: center;
@@ -186,6 +187,11 @@ body {
         color: white;
         font-size: 1.35rem;
         padding: 8rem;
+        #blur {
+          background-color: rgba(126, 125, 125, 0.374);
+          padding: 0.45rem 0.75rem;
+          border-radius: 10px;
+        }
       }
     }
     .timeline {
@@ -410,7 +416,7 @@ body {
     display: flex;
     justify-content: center;
     #f-l {
-      padding: 1rem;
+      padding: 0.5rem;
       img {
         width: 60px;
       }
@@ -601,14 +607,16 @@ body {
         // padding-right: 20px;
         margin-left: 0rem;
         #f-t {
-          padding: 1rem;
+          padding: 0;
+          margin-bottom: 1rem;
           ul {
             display: flex;
             flex-direction: column;
-            margin: 1rem;
+            margin: 0rem;
+            padding: 0rem;
             li {
               padding: 0rem;
-              line-height: 0.2rem;
+              line-height: 2rem;
             }
           }
         }

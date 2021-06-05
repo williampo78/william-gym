@@ -93,6 +93,7 @@ body main #top {
 
 body main #top .carousel .carousel-inner .carousel-item {
   height: 80vh;
+  position: relative;
 }
 
 body main #top .carousel .carousel-inner .carousel-item img {
@@ -247,6 +248,12 @@ body main #about #r {
   color: white;
   font-size: 1.35rem;
   padding: 8rem;
+}
+
+body main #about #r #blur {
+  background-color: rgba(126, 125, 125, 0.374);
+  padding: 0.45rem 0.75rem;
+  border-radius: 10px;
 }
 
 body main .timeline {
@@ -530,7 +537,7 @@ body footer {
 }
 
 body footer #f-l {
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 body footer #f-l img {
@@ -747,7 +754,8 @@ body footer #f-r #f-b .small {
     margin-left: 0rem;
   }
   footer #f-r #f-t {
-    padding: 1rem;
+    padding: 0;
+    margin-bottom: 1rem;
   }
   footer #f-r #f-t ul {
     display: -webkit-box;
@@ -757,11 +765,12 @@ body footer #f-r #f-b .small {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 1rem;
+    margin: 0rem;
+    padding: 0rem;
   }
   footer #f-r #f-t ul li {
     padding: 0rem;
-    line-height: 0.2rem;
+    line-height: 2rem;
   }
   footer #f-r #f-b {
     text-align: center;
