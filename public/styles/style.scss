@@ -34,7 +34,7 @@ body {
             a.nava {
               text-decoration: none;
               color: white;
-              font-size: 1.25rem;
+              font-size: 1rem;
               font-weight: bold;
               //   display: flex;
               //   flex-direction: column;
@@ -93,30 +93,19 @@ body {
         }
       }
     }
+    h1 {
+      font-size: 3rem;
+    }
     #bottom {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 3rem;
+      margin-bottom: 3rem;
       display: flex;
       flex-wrap: wrap;
       div {
         width: 375px;
         height: 260px;
-      }
-      .desc {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 5rem;
-        h3 {
-          display: inline-block;
-          background-color: #f00000;
-          padding: 1rem 1.5rem;
-          color: white;
-          font-size: 2.2rem;
-          cursor: default;
-        }
       }
 
       .pic {
@@ -125,7 +114,7 @@ body {
         object-fit: cover;
         width: 375px;
         height: 260px;
-        margin: 3rem;
+        margin: 0rem 3rem 5rem 3rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -178,8 +167,9 @@ body {
         max-height: 80%;
         color: white;
         h3 {
-          font-size: 3rem;
+          font-size: 3.6rem;
           font-weight: bold;
+          text-shadow: 0.2rem 0.3rem rgb(94, 73, 73);
         }
       }
       #r {
@@ -188,7 +178,7 @@ body {
         font-size: 1.35rem;
         padding: 8rem;
         #blur {
-          background-color: rgba(126, 125, 125, 0.374);
+          background-color: rgba(65, 65, 65, 0.514);
           padding: 0.45rem 0.75rem;
           border-radius: 10px;
         }
@@ -418,7 +408,7 @@ body {
     #f-l {
       padding: 0.5rem;
       img {
-        width: 60px;
+        width: 45px;
       }
     }
     #f-r {
@@ -462,10 +452,7 @@ body {
 @media screen and (max-width: 991px) {
   main {
     div#bottom {
-      padding: 3rem 0rem;
-      div.desc {
-        margin: 2rem 0rem;
-      }
+      margin-bottom: 5rem;
       div.pic {
         margin: 2rem 0rem;
       }

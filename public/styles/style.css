@@ -47,7 +47,7 @@ body header .navbar #right ul .nav-item {
 body header .navbar #right ul .nav-item a.nava {
   text-decoration: none;
   color: white;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -116,6 +116,10 @@ body main #top .carousel .carousel-inner .carousel-item .carousel-caption h5 {
   font-weight: bold;
 }
 
+body main h1 {
+  font-size: 3rem;
+}
+
 body main #bottom {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,7 +130,7 @@ body main #bottom {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -137,28 +141,6 @@ body main #bottom div {
   height: 260px;
 }
 
-body main #bottom .desc {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 5rem;
-}
-
-body main #bottom .desc h3 {
-  display: inline-block;
-  background-color: #f00000;
-  padding: 1rem 1.5rem;
-  color: white;
-  font-size: 2.2rem;
-  cursor: default;
-}
-
 body main #bottom .pic {
   position: relative;
   overflow: hidden;
@@ -166,7 +148,7 @@ body main #bottom .pic {
      object-fit: cover;
   width: 375px;
   height: 260px;
-  margin: 3rem;
+  margin: 0rem 3rem 5rem 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,8 +221,9 @@ body main #about #l {
 }
 
 body main #about #l h3 {
-  font-size: 3rem;
+  font-size: 3.6rem;
   font-weight: bold;
+  text-shadow: 0.2rem 0.3rem #5e4949;
 }
 
 body main #about #r {
@@ -251,7 +234,7 @@ body main #about #r {
 }
 
 body main #about #r #blur {
-  background-color: rgba(126, 125, 125, 0.374);
+  background-color: rgba(65, 65, 65, 0.514);
   padding: 0.45rem 0.75rem;
   border-radius: 10px;
 }
@@ -541,7 +524,7 @@ body footer #f-l {
 }
 
 body footer #f-l img {
-  width: 60px;
+  width: 45px;
 }
 
 body footer #f-r {
@@ -605,10 +588,7 @@ body footer #f-r #f-b .small {
 
 @media screen and (max-width: 991px) {
   main div#bottom {
-    padding: 3rem 0rem;
-  }
-  main div#bottom div.desc {
-    margin: 2rem 0rem;
+    margin-bottom: 5rem;
   }
   main div#bottom div.pic {
     margin: 2rem 0rem;
