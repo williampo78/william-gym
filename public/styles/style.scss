@@ -8,12 +8,11 @@
 body {
   header {
     background-color: #f00000;
-
     .navbar {
       display: flex;
       justify-content: space-between;
       #left {
-        margin: 0rem 3rem;
+        margin: 0rem 5rem;
         padding-left: 2rem;
         .navbar-brand {
           margin: 0;
@@ -24,13 +23,16 @@ body {
         }
       }
       #right {
-        padding-right: 2rem;
+        padding-right: 1rem;
         ul {
+          display: flex;
+          justify-content: space-evenly;
+          width: 45vw;
           .nav-item {
             color: white;
             font-size: 1.2rem;
             font-weight: bold;
-            margin: 0rem 1rem;
+            // margin: 0rem 1.5rem;
             a.nava {
               text-decoration: none;
               color: white;
@@ -101,20 +103,17 @@ body {
       justify-content: center;
       align-items: center;
       margin-bottom: 3rem;
-      display: flex;
       flex-wrap: wrap;
-      div {
-        width: 375px;
-        height: 260px;
-      }
+      padding: 0rem 3rem;
 
       .pic {
+        display: block;
         position: relative;
         overflow: hidden;
         object-fit: cover;
-        width: 375px;
-        height: 260px;
-        margin: 0rem 3rem 5rem 3rem;
+        width: 27vw;
+        height: 20vw;
+        margin: 0rem 1rem 3rem 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -452,9 +451,9 @@ body {
 @media screen and (max-width: 991px) {
   main {
     div#bottom {
-      margin-bottom: 5rem;
+      width: 100vw;
       div.pic {
-        margin: 2rem 0rem;
+        width: 30vw;
       }
     }
     #about {
@@ -522,6 +521,12 @@ body {
               }
             }
           }
+        }
+      }
+      div#bottom {
+        div.pic {
+          width: 60vw;
+          height: 40vw;
         }
       }
 
@@ -616,21 +621,6 @@ body {
             display: none;
           }
         }
-      }
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    main {
-      div.wrapper {
-        display: flex;
-        flex-direction: column;
-      }
-      div.wrapper div:nth-child(3) {
-        order: 4;
-      }
-      div.wrapper div:nth-child(4) {
-        order: 3;
       }
     }
   }

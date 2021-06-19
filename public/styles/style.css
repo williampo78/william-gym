@@ -20,7 +20,7 @@ body header .navbar {
 }
 
 body header .navbar #left {
-  margin: 0rem 3rem;
+  margin: 0rem 5rem;
   padding-left: 2rem;
 }
 
@@ -34,14 +34,23 @@ body header .navbar #left .navbar-brand img {
 }
 
 body header .navbar #right {
-  padding-right: 2rem;
+  padding-right: 1rem;
+}
+
+body header .navbar #right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 45vw;
 }
 
 body header .navbar #right ul .nav-item {
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 0rem 1rem;
 }
 
 body header .navbar #right ul .nav-item a.nava {
@@ -131,24 +140,20 @@ body main #bottom {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
-  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-body main #bottom div {
-  width: 375px;
-  height: 260px;
+  padding: 0rem 3rem;
 }
 
 body main #bottom .pic {
+  display: block;
   position: relative;
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 375px;
-  height: 260px;
-  margin: 0rem 3rem 5rem 3rem;
+  width: 27vw;
+  height: 20vw;
+  margin: 0rem 1rem 3rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -588,10 +593,10 @@ body footer #f-r #f-b .small {
 
 @media screen and (max-width: 991px) {
   main div#bottom {
-    margin-bottom: 5rem;
+    width: 100vw;
   }
   main div#bottom div.pic {
-    margin: 2rem 0rem;
+    width: 30vw;
   }
   main #about {
     display: -webkit-box;
@@ -659,6 +664,10 @@ body footer #f-r #f-b .small {
   main div#top div.carousel div.carousel-inner div.carousel-item div.carousel-caption h5 {
     font-size: 38px;
     margin-top: 0.5;
+  }
+  main div#bottom div.pic {
+    width: 60vw;
+    height: 40vw;
   }
   main div#about {
     height: 60vh;
@@ -765,28 +774,6 @@ body footer #f-r #f-b .small {
   }
   footer #f-r #f-b .br {
     display: none;
-  }
-}
-
-@media screen and (max-width: 991px) and (max-width: 1200px) {
-  main div.wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  main div.wrapper div:nth-child(3) {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-  }
-  main div.wrapper div:nth-child(4) {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
   }
 }
 /*# sourceMappingURL=style.css.map */
