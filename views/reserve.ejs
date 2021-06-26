@@ -118,7 +118,9 @@
         <a href="/login"><button class="login-first">我要預約</button></a>
 
         <%} else {%> <% if(newlist.person.includes(user.fullname)) {%>
-        <a href="/reserve/delete"><button class="book-now">取消預約</button></a>
+        <a href="/reserve/delete"
+          ><button class="book-now" id="cancel">取消預約</button></a
+        >
 
         <%}else {%> <%if(15-9-newlist.person.length==0){%>
         <button class="book-now" disabled>預約已滿</button>

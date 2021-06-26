@@ -97,7 +97,12 @@ body main {
 body main #top {
   width: 100%;
   height: auto;
-  z-index: -5;
+}
+
+body main #top ol li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
 }
 
 body main #top .carousel .carousel-inner .carousel-item {
@@ -410,6 +415,11 @@ body main #login form .login-btn {
   background-color: #f00000;
   color: white;
   margin: 1rem 0rem;
+  outline: none;
+}
+
+body main #login form .login-btn:active, body main #login form .login-btn.active {
+  background-color: #c44343;
 }
 
 body main #signup {
@@ -500,6 +510,14 @@ body main .res-can button.book-now {
   background-color: #f00000;
   color: #fff;
   font-size: 1.25rem;
+}
+
+body main .res-can #cancel {
+  background-color: #cc3030;
+}
+
+body main .res-can #cancel:hover {
+  background-color: #f00000;
 }
 
 body main .res-can a button.login-first {

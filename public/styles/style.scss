@@ -69,7 +69,13 @@ body {
     #top {
       width: 100%;
       height: auto;
-      z-index: -5;
+      ol {
+        li {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
       .carousel {
         .carousel-inner {
           .carousel-item {
@@ -82,7 +88,7 @@ body {
             }
             .carousel-caption {
               top: 30%;
-              // position: absolute;
+
               h5 {
                 display: inline-block;
                 margin: 1rem;
@@ -317,6 +323,11 @@ body {
           background-color: #f00000;
           color: white;
           margin: 1rem 0rem;
+          outline: none;
+          &:active,
+          &.active {
+            background-color: #c44343;
+          }
         }
       }
     }
@@ -382,6 +393,12 @@ body {
         background-color: #f00000;
         color: #fff;
         font-size: 1.25rem;
+      }
+      #cancel {
+        background-color: #cc3030;
+        &:hover {
+          background-color: #f00000;
+        }
       }
 
       a {
