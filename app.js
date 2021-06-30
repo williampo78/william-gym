@@ -116,8 +116,8 @@ app.get("/charge", async (req, res) => {
 });
 
 app.get("/reserve", async (req, res) => {
-  // let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
-  let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
+  let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
+  // let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
   if (req.isAuthenticated()) {
     let { _id } = req.user;
 
@@ -134,8 +134,8 @@ app.get("/reserve/success/", async (req, res) => {
     if (req.isAuthenticated()) {
       let { username } = req.user;
       let user = await User.findOne({ username });
-      // let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
-      let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
+      let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
+      // let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
       // console.log(currentList);
       currentList.person.push(user.fullname);
       await currentList.save();
@@ -159,8 +159,8 @@ app.get("/reserve/delete/", async (req, res) => {
     if (req.isAuthenticated()) {
       let { username } = req.user;
       let user = await User.findOne({ username });
-      // let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
-      let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
+      let currentList = await List.findOne({ _id: "606be2a1c33f5f2e80b8ff89" });
+      // let currentList = await List.findOne({ _id: "606ad8297bb84a00045d2df4" });
       // console.log(currentList);
       currentList.person.pull(user.fullname);
       await currentList.save();
