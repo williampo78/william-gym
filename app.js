@@ -85,6 +85,16 @@ app.get("/", async (req, res, next) => {
   }
 });
 
+app.get("/course", async (req, res) => {
+  if (req.isAuthenticated()) {
+    let { _id } = req.user;
+    let user = await User.findOne({ _id });
+    res.render("course", { user: req.user });
+  } else {
+    res.render("course");
+  }
+});
+
 app.get("/about", async (req, res) => {
   if (req.isAuthenticated()) {
     let { _id } = req.user;

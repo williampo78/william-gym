@@ -393,6 +393,13 @@ body main .map {
   width: 70vw;
 }
 
+body main .banner {
+  height: 80vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 body main #login {
   width: 450px;
   border: 1px solid #cecece;

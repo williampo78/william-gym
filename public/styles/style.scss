@@ -313,12 +313,18 @@ body {
       width: 70vw;
     }
 
+    .banner {
+      height: 80vh;
+      width: 100%;
+      object-fit: cover;
+    }
     #login {
       width: 450px;
       border: 1px solid rgb(206, 206, 206);
       border-radius: 20px;
       padding: 2rem 1.75rem 4rem 1.75rem;
       margin: 0rem 2rem 5rem 2rem;
+
       form {
         display: flex;
         flex-direction: column;
