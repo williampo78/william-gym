@@ -7,8 +7,12 @@
 }
 
 body header {
-  min-height: 10vh;
+  min-height: 5vh;
   background-color: #f00000;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 20;
 }
 
 body header .navbar {
@@ -18,6 +22,7 @@ body header .navbar {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 5px 0;
 }
 
 body header .navbar #left {
@@ -98,9 +103,32 @@ body main {
 
 body main .banner {
   width: 100%;
-  height: 80vh;
+  height: 60vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .banner .banner-img {
+  width: 100%;
+  height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+body main .banner .banner-h1 {
+  position: absolute;
+  color: white;
+  text-shadow: 0.1em 0.1em 0.2em #424242;
+  font-size: 4rem;
+  font-weight: bold;
 }
 
 body main #top {
@@ -115,7 +143,7 @@ body main #top ol li {
 }
 
 body main #top .carousel .carousel-inner .carousel-item {
-  height: 80vh;
+  height: 60vh;
   position: relative;
 }
 
@@ -128,19 +156,20 @@ body main #top .carousel .carousel-inner .carousel-item img {
 }
 
 body main #top .carousel .carousel-inner .carousel-item .carousel-caption {
-  top: 30%;
+  top: 35%;
 }
 
-body main #top .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+body main #top .carousel .carousel-inner .carousel-item .carousel-caption h1 {
   display: inline-block;
-  margin: 1rem;
   top: 50%;
   font-size: 4rem;
   font-weight: bold;
+  margin: 0;
 }
 
-body main h1 {
+body main h2 {
   font-size: 3rem;
+  margin: 5rem 0rem;
 }
 
 body main #bottom {
@@ -203,20 +232,16 @@ body main #bottom .pic .show {
   width: 70%;
   color: #fff;
   z-index: 2;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   cursor: default;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out;
 }
 
-body main h1 {
-  margin: 5rem 0rem;
-}
-
 body main #about {
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   background-image: url(../images/workout.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -239,10 +264,10 @@ body main #about #l {
   color: white;
 }
 
-body main #about #l h3 {
-  font-size: 3.6rem;
+body main #about #l h1 {
+  font-size: 4rem;
   font-weight: bold;
-  text-shadow: 0.2rem 0.3rem #5e4949;
+  text-shadow: 0.3rem 0.3rem 0.6rem #5e4949;
 }
 
 body main #about #r {
@@ -324,7 +349,7 @@ body main .card .row .col-md-4 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 20px;
+  padding: 0 25px;
 }
 
 body main .card .row .col-md-4 img {
@@ -391,13 +416,6 @@ body main #charge p a {
 
 body main .map {
   width: 70vw;
-}
-
-body main .banner {
-  height: 80vh;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 body main #login {
@@ -630,13 +648,16 @@ body footer #f-r #f-b .small {
 }
 
 @media screen and (max-width: 991px) {
-  main div#bottom {
+  body main #bottom {
     width: 100vw;
   }
-  main div#bottom div.pic {
+  body main #bottom .pic {
     width: 30vw;
   }
-  main #about {
+  body main #bottom .pic .show {
+    font-size: 16px;
+  }
+  body main #about {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -646,7 +667,7 @@ body footer #f-r #f-b .small {
             flex-direction: column;
     height: 60vh;
   }
-  main #about div#l {
+  body main #about #l {
     width: 90%;
     padding: 0;
     max-height: 80%;
@@ -658,11 +679,7 @@ body footer #f-r #f-b .small {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main #about div#l h3 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  main #about div#r {
+  body main #about #r {
     width: 90vw;
     color: white;
     font-size: 1.5rem;
@@ -674,92 +691,104 @@ body footer #f-r #f-b .small {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  main div#charge {
+  body main div#charge {
     width: 90vw;
   }
-  main div#charge img {
+  body main div#charge img {
     width: 90%;
     margin-left: 5%;
   }
-  main div#charge p {
+  body main div#charge p {
     font-size: 1.2rem;
     font-weight: bold;
     margin-left: 15%;
   }
 }
 
-@media screen and (max-width: 991px) and (max-width: 650px) {
-  header nav.navbar #left {
+@media screen and (max-width: 650px) {
+  body header nav.navbar #left {
     padding-left: 0;
     margin: 0rem 1rem;
   }
-  header nav.navbar #right {
+  body header nav.navbar #right {
     padding: 0rem;
   }
-  main div#top div.carousel div.carousel-inner div.carousel-item {
+  body main .banner .banner-h1 {
+    font-size: 2.5rem;
+  }
+  body main h2 {
+    font-size: 2rem;
+  }
+  body main div#top div.carousel div.carousel-inner div.carousel-item {
     height: 60vh;
   }
-  main div#top div.carousel div.carousel-inner div.carousel-item div.carousel-caption h5 {
-    font-size: 38px;
+  body main div#top div.carousel div.carousel-inner div.carousel-item div.carousel-caption h1 {
+    font-size: 2.5rem;
     margin-top: 0.5;
   }
-  main div#bottom div.pic {
+  body main div#bottom div.pic {
     width: 60vw;
     height: 40vw;
   }
-  main div#about {
-    height: 60vh;
+  body main div#about {
+    min-height: 60vh;
   }
-  main div#about div#l h3 {
+  body main div#about div#l h1 {
     margin-top: 2rem;
     font-size: 2.5rem;
     font-weight: bold;
   }
-  main div#about div#r {
+  body main div#about div#r {
     font-size: 1.2rem;
   }
-  main .timeline {
+  body main .timeline {
     max-width: 98%;
     padding: 0 27px 0 27px;
   }
-  main .timeline .event {
+  body main .timeline .event h3 {
+    font-size: 1.2rem;
+  }
+  body main .timeline .event p {
+    font-size: 1rem;
+  }
+  body main .timeline .event {
     padding-top: 0;
   }
-  main .timeline .event:after {
+  body main .timeline .event:after {
     left: -31.8px;
   }
-  main div.car {
+  body main div.car {
     width: 85%;
     margin-bottom: 0rem;
   }
-  main div#charge img {
+  body main div#charge img {
     width: 100%;
     margin: 0;
   }
-  main div#charge p {
+  body main div#charge p {
     font-size: 0.7rem;
     font-weight: bold;
     margin-left: 15%;
   }
-  main div#signup {
+  body main div#signup {
     width: 85vw;
   }
-  main div#signup .form-floating {
+  body main div#signup .form-floating {
     width: 75vw;
   }
-  main div#signup .form-floating .form-control {
+  body main div#signup .form-floating .form-control {
     width: 100%;
   }
-  main div#signup .form-select {
+  body main div#signup .form-select {
     width: 75vw;
   }
-  main div#login {
+  body main div#login {
     width: 85vw;
   }
-  main div#login .form-control {
+  body main div#login .form-control {
     width: 100%;
   }
-  footer #f-l {
+  body footer #f-l {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -770,7 +799,7 @@ body footer #f-r #f-b .small {
         -ms-flex-align: center;
             align-items: center;
   }
-  footer #f-r {
+  body footer #f-r {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -780,11 +809,11 @@ body footer #f-r #f-b .small {
             flex-direction: column;
     margin-left: 0rem;
   }
-  footer #f-r #f-t {
+  body footer #f-r #f-t {
     padding: 0;
     margin-bottom: 1rem;
   }
-  footer #f-r #f-t ul {
+  body footer #f-r #f-t ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -795,11 +824,11 @@ body footer #f-r #f-b .small {
     margin: 0rem;
     padding: 0rem;
   }
-  footer #f-r #f-t ul li {
+  body footer #f-r #f-t ul li {
     padding: 0rem;
     line-height: 2rem;
   }
-  footer #f-r #f-b {
+  body footer #f-r #f-b {
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -810,7 +839,7 @@ body footer #f-r #f-b .small {
             flex-direction: column;
     padding-bottom: 1rem;
   }
-  footer #f-r #f-b .br {
+  body footer #f-r #f-b .br {
     display: none;
   }
 }

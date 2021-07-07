@@ -76,7 +76,11 @@
       </nav>
     </header>
     <main>
-      <h1>加入會員</h1>
+      <div class="banner">
+        <img src="/images/login3.jpg" class="banner-img" alt="" />
+        <h1 class="banner-h1">會員專區</h1>
+      </div>
+      <h2>加入會員</h2>
 
       <div id="signup">
         <form method="POST" action="/register">
@@ -85,16 +89,14 @@
             <input
               type="text"
               class="form-control"
-              id="floatingInput"
+              id="name"
               name="fullname"
               placeholder="Full Name"
               required
               minlength="2"
               maxlength="10"
             />
-            <label for="floatingInput" style="color: black"
-              >請輸入真實姓名</label
-            >
+            <label for="name" style="color: black">請輸入真實姓名</label>
           </div>
           <select
             class="form-select"
@@ -111,51 +113,51 @@
             <input
               type="date"
               class="form-control"
-              id="floatingInput"
+              id="birth"
               placeholder=""
               name="birth"
               required
             />
-            <label for="floatingInput" style="color: black">生日</label>
+            <label for="birth" style="color: black">生日</label>
           </div>
 
           <div class="form-floating mb-3">
             <input
               type="text"
               class="form-control"
-              id="floatingInput"
+              id="phone"
               placeholder="09xxxxxxxx"
               name="phone"
               maxlength="10"
               required
             />
-            <label for="floatingInput" style="color: black">連絡電話</label>
+            <label for="phone" style="color: black">連絡電話</label>
           </div>
 
           <div class="form-floating mb-3">
             <input
               type="email"
               class="form-control"
-              id="floatingInput"
+              id="email"
               placeholder="name@example.com"
               name="username"
               required
             />
-            <label for="floatingInput" style="color: black">電子信箱</label>
+            <label for="email" style="color: black">電子信箱</label>
           </div>
           <div class="form-floating mb-3">
             <input
               style="font-size: 10px"
               type="password"
               class="form-control"
-              id="floatingPassword"
+              id="password"
               placeholder="Password"
               name="password"
               required
               minlength="6"
               maxlength="25"
             />
-            <label for="floatingPassword" style="color: black">密碼</label>
+            <label for="password" style="color: black">密碼</label>
           </div>
 
           <div class="form-floating mb-3">
@@ -163,14 +165,14 @@
               style="font-size: 10px"
               type="password"
               class="form-control"
-              id="floatingPassword"
+              id="password2"
               placeholder="Password Again"
-              name="password2"
+              name="passwordCheck"
               required
               minlength="6"
               maxlength="25"
             />
-            <label for="floatingPassword" style="color: black"
+            <label for="passwordCheck" style="color: black"
               >請再次輸入密碼</label
             >
             <div id="emailHelp" class="form-text">

@@ -7,11 +7,15 @@
 
 body {
   header {
-    min-height: 10vh;
+    min-height: 5vh;
     background-color: #f00000;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
     .navbar {
       display: flex;
       justify-content: space-between;
+      padding: 5px 0;
       #left {
         margin: 0rem 5rem;
         padding-left: 2rem;
@@ -70,8 +74,23 @@ body {
     min-height: 80vh;
     .banner {
       width: 100%;
-      height: 80vh;
-      object-fit: cover;
+      height: 60vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .banner-img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+      }
+      .banner-h1 {
+        position: absolute;
+        color: white;
+        text-shadow: 0.1em 0.1em 0.2em rgb(66, 66, 66);
+        font-size: 4rem;
+        font-weight: bold;
+      }
     }
     #top {
       width: 100%;
@@ -86,7 +105,7 @@ body {
       .carousel {
         .carousel-inner {
           .carousel-item {
-            height: 80vh;
+            height: 60vh;
             position: relative;
             img {
               height: 100%;
@@ -94,22 +113,22 @@ body {
               object-fit: cover;
             }
             .carousel-caption {
-              top: 30%;
-
-              h5 {
+              top: 35%;
+              h1 {
                 display: inline-block;
-                margin: 1rem;
                 top: 50%;
                 font-size: 4rem;
                 font-weight: bold;
+                margin: 0;
               }
             }
           }
         }
       }
     }
-    h1 {
+    h2 {
       font-size: 3rem;
+      margin: 5rem 0rem;
     }
     #bottom {
       display: flex;
@@ -150,21 +169,16 @@ body {
           width: 70%;
           color: #fff;
           z-index: 2;
-          font-size: 22px;
+          font-size: 24px;
           font-weight: bold;
           cursor: default;
           transition: 1s ease-in-out;
         }
       }
     }
-
-    h1 {
-      margin: 5rem 0rem;
-    }
-
     #about {
       width: 100%;
-      height: 80vh;
+      height: 60vh;
       background-image: url(../images/workout.jpg);
       background-size: cover;
       background-repeat: no-repeat;
@@ -178,10 +192,10 @@ body {
         padding: 2rem 0rem;
         max-height: 80%;
         color: white;
-        h3 {
-          font-size: 3.6rem;
+        h1 {
+          font-size: 4rem;
           font-weight: bold;
-          text-shadow: 0.2rem 0.3rem rgb(94, 73, 73);
+          text-shadow: 0.3rem 0.3rem 0.6rem rgb(94, 73, 73);
         }
       }
       #r {
@@ -251,7 +265,7 @@ body {
         .col-md-4 {
           display: flex;
           align-items: center;
-          padding-left: 20px;
+          padding: 0 25px;
           img {
             width: 100%;
             height: 90%;
@@ -311,12 +325,6 @@ body {
     }
     .map {
       width: 70vw;
-    }
-
-    .banner {
-      height: 80vh;
-      width: 100%;
-      object-fit: cover;
     }
     #login {
       width: 450px;
@@ -483,53 +491,56 @@ body {
 }
 
 @media screen and (max-width: 991px) {
-  main {
-    div#bottom {
-      width: 100vw;
-      div.pic {
-        width: 30vw;
-      }
-    }
-    #about {
-      display: flex;
-      flex-direction: column;
-      height: 60vh;
-      div#l {
-        width: 90%;
-        padding: 0;
-        max-height: 80%;
-        color: white;
-        display: flex;
-        justify-content: center;
-        h3 {
-          font-size: 3rem;
-          font-weight: bold;
+  body {
+    main {
+      #bottom {
+        width: 100vw;
+        .pic {
+          width: 30vw;
+          .show {
+            font-size: 16px;
+          }
         }
       }
-      div#r {
-        width: 90vw;
-        color: white;
-        font-size: 1.5rem;
-        padding: 2rem;
+      #about {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        height: 60vh;
+        #l {
+          width: 90%;
+          padding: 0;
+          max-height: 80%;
+          color: white;
+          display: flex;
+          justify-content: center;
+        }
+        #r {
+          width: 90vw;
+          color: white;
+          font-size: 1.5rem;
+          padding: 2rem;
+          display: flex;
+          justify-content: center;
+        }
       }
-    }
-    div#charge {
-      width: 90vw;
-      img {
-        width: 90%;
-        margin-left: 5%;
-      }
-      p {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-left: 15%;
+      div#charge {
+        width: 90vw;
+        img {
+          width: 90%;
+          margin-left: 5%;
+        }
+        p {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-left: 15%;
+        }
       }
     }
   }
+}
 
-  @media screen and (max-width: 650px) {
+@media screen and (max-width: 650px) {
+  body {
     header {
       nav.navbar {
         #left {
@@ -542,14 +553,22 @@ body {
       }
     }
     main {
+      .banner {
+        .banner-h1 {
+          font-size: 2.5rem;
+        }
+      }
+      h2 {
+        font-size: 2rem;
+      }
       div#top {
         div.carousel {
           div.carousel-inner {
             div.carousel-item {
               height: 60vh;
               div.carousel-caption {
-                h5 {
-                  font-size: 38px;
+                h1 {
+                  font-size: 2.5rem;
                   margin-top: 0.5;
                 }
               }
@@ -565,9 +584,9 @@ body {
       }
 
       div#about {
-        height: 60vh;
+        min-height: 60vh;
         div#l {
-          h3 {
+          h1 {
             margin-top: 2rem;
             font-size: 2.5rem;
             font-weight: bold;
@@ -580,6 +599,14 @@ body {
       .timeline {
         max-width: 98%;
         padding: 0 27px 0 27px;
+        .event {
+          h3 {
+            font-size: 1.2rem;
+          }
+          p {
+            font-size: 1rem;
+          }
+        }
       }
       .timeline .event {
         padding-top: 0;
