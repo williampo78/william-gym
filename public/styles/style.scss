@@ -490,6 +490,41 @@ body {
   }
 }
 
+@media screen and (max-width: 1366px) {
+  body {
+    main {
+      #top {
+        .carousel {
+          .carousel-inner {
+            .carousel-item {
+              .carousel-caption {
+                h1 {
+                  font-size: 3.5rem;
+                  letter-spacing: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+      #about {
+        #l {
+          h1 {
+            font-size: 3.5rem;
+            letter-spacing: 3px;
+          }
+        }
+      }
+      .banner {
+        .banner-h1 {
+          font-size: 3.5rem;
+          letter-spacing: 3px;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 991px) {
   body {
     main {

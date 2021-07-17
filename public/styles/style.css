@@ -647,6 +647,21 @@ body footer #f-r #f-b .small {
   }
 }
 
+@media screen and (max-width: 1366px) {
+  body main #top .carousel .carousel-inner .carousel-item .carousel-caption h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+  body main #about #l h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+  body main .banner .banner-h1 {
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+  }
+}
+
 @media screen and (max-width: 991px) {
   body main #bottom {
     width: 100vw;
