@@ -581,7 +581,15 @@ body footer {
 }
 
 body footer #f-l {
-  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body footer #f-l img {
@@ -664,7 +672,7 @@ body footer #f-r #f-b .small {
 
 @media screen and (max-width: 991px) {
   body main #bottom {
-    width: 100vw;
+    width: 100%;
   }
   body main #bottom .pic {
     width: 30vw;
@@ -806,17 +814,6 @@ body footer #f-r #f-b .small {
   body main div#login .form-control {
     width: 100%;
   }
-  body footer #f-l {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   body footer #f-r {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -828,8 +825,7 @@ body footer #f-r #f-b .small {
     margin-left: 0rem;
   }
   body footer #f-r #f-t {
-    padding: 0;
-    margin-bottom: 1rem;
+    display: none;
   }
   body footer #f-r #f-t ul {
     display: -webkit-box;
@@ -855,7 +851,6 @@ body footer #f-r #f-b .small {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding-bottom: 1rem;
   }
   body footer #f-r #f-b .br {
     display: none;

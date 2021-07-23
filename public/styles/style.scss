@@ -447,7 +447,9 @@ body {
     display: flex;
     justify-content: center;
     #f-l {
-      padding: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       img {
         width: 45px;
       }
@@ -529,7 +531,7 @@ body {
   body {
     main {
       #bottom {
-        width: 100vw;
+        width: 100%;
         .pic {
           width: 30vw;
           .show {
@@ -685,19 +687,14 @@ body {
       }
     }
     footer {
-      #f-l {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
       #f-r {
         display: flex;
         flex-direction: column;
-        // padding-right: 20px;
         margin-left: 0rem;
         #f-t {
-          padding: 0;
-          margin-bottom: 1rem;
+          display: none;
+          // padding: 0;
+          // margin-bottom: 1rem;
           ul {
             display: flex;
             flex-direction: column;
@@ -713,7 +710,6 @@ body {
           text-align: center;
           display: flex;
           flex-direction: column;
-          padding-bottom: 1rem;
           .br {
             display: none;
           }
