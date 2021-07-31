@@ -446,6 +446,7 @@ body {
     background-color: #f00000;
     display: flex;
     justify-content: center;
+    padding: 5px 0px;
     #f-l {
       display: flex;
       justify-content: center;
@@ -464,6 +465,7 @@ body {
         ul {
           display: flex;
           list-style-type: none;
+          margin: 0;
           li {
             margin-left: 1rem;
             a {
@@ -536,6 +538,7 @@ body {
           width: 30vw;
           .show {
             font-size: 16px;
+            top: 20%;
           }
         }
       }

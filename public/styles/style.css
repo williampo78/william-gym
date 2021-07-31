@@ -578,6 +578,7 @@ body footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 5px 0px;
 }
 
 body footer #f-l {
@@ -618,6 +619,7 @@ body footer #f-r #f-t ul {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
+  margin: 0;
 }
 
 body footer #f-r #f-t ul li {
@@ -679,6 +681,7 @@ body footer #f-r #f-b .small {
   }
   body main #bottom .pic .show {
     font-size: 16px;
+    top: 20%;
   }
   body main #about {
     display: -webkit-box;
