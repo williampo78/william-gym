@@ -569,7 +569,7 @@ body main .res-can a button.login-first {
 }
 
 body footer {
-  min-height: 10vh;
+  min-height: 8vh;
   color: white;
   background-color: #f00000;
   display: -webkit-box;
